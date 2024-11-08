@@ -1,34 +1,213 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Varshitha Gatta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .resume-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section-title {
+            color: #333;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <h1>Varshitha Gatta</h1>
+        <p><strong>Email:</strong> 2310080018@klh.edu.in</p>
+
+        <h2 class="section-title">Education</h2>
+        <ul>
+            <li><strong>SSC (Secondary School Certificate)</strong>: 100%</li>
+            <li><strong>Intermediate Education</strong>: 93.2%</li>
+        </ul>
+
+        <h2 class="section-title">Projects</h2>
+        <ul>
+            <li><strong>Diet Suggester</strong> - Developed a web application for personalized diet suggestions based on daily food consumption, providing nutritional analysis and optimized diets.</li>
+            <li><strong>Avinya</strong> - Organized and led technical events, managing successful engagement and event coordination.</li>
+        </ul>
+
+        <h2 class="section-title">Skills</h2>
+        <ul>
+            <li><strong>Programming Languages:</strong> Python, JavaScript</li>
+            <li><strong>Web Development:</strong> Django, HTML, CSS</li>
+            <li><strong>Data Analysis:</strong> Excel, SQL</li>
+            <li><strong>Design:</strong> Canva, Figma</li>
+            <li><strong>Soft Skills:</strong> Communication, Leadership, Problem-solving</li>
+        </ul>
+
+        <h2 class="section-title">Strengths</h2>
+        <ul>
+            <li>Strong analytical and problem-solving abilities</li>
+            <li>Effective time management and organizational skills</li>
+            <li>Team collaboration</li>
+            <li>Adaptable to new environments and technologies</li>
+        </ul>
+
+        <h2 class="section-title">Weaknesses</h2>
+        <ul>
+            <li>Detail-oriented, sometimes affecting project pace</li>
+            <li>Improving public speaking skills through practice</li>
+        </ul>
+
+        <h2 class="section-title">Hobbies</h2>
+        <ul>
+            <li>Swimming</li>
+            <li>Drawing</li>
+            <li>Badminton</li>
+            <li>Dancing</li>
+        </ul>
+    </div>
+</body>
+</html> {% endcomment %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ resume.name }}'s Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Varshitha Gatta</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+        .resume-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #2b2d42;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        p {
+            text-align: center;
+            color: #6c757d;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            color: #2b2d42;
+            font-size: 20px;
+            font-weight: bold;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            color: #333;
+            line-height: 1.6;
+            padding: 5px 0;
+        }
+        ul li strong {
+            color: #007acc;
+        }
+        .contact-info {
+            text-align: center;
+            color: #555;
+        }
+        .skills, .strengths, .weaknesses, .hobbies {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .skills li, .strengths li, .weaknesses li, .hobbies li {
+            background-color: #e9ecef;
+            padding: 8px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>{{ resume.name }}</h1>
-    <p>Email: {{ resume.email }}</p>
-    <p>Phone: {{ resume.phone }}</p>
-    <h2>Summary</h2>
-    <p>{{ resume.summary }}</p>
-    
-    <h2>Experience</h2>
-    {% for experience in experiences %}
-        <h3>{{ experience.title }} at {{ experience.company }}</h3>
-        <p>{{ experience.description }}</p>
-        <p>{{ experience.start_date }} - {{ experience.end_date|default:"Present" }}</p>
-    {% endfor %}
-    
-    <h2>Education</h2>
-    {% for edu in education %}
-        <h3>{{ edu.degree }} from {{ edu.institution }}</h3>
-        <p>Graduated: {{ edu.graduation_year }}</p>
-    {% endfor %}
-    
-    <h2>Skills</h2>
-    <ul>
-        {% for skill in skills %}
-            <li>{{ skill.name }}</li>
-        {% endfor %}
-    </ul>
+    <div class="resume-container">
+        <h1>Varshitha Gatta</h1>
+        <p class="contact-info">Email: 2310080018@klh.edu.in</p>
+
+        <h2 class="section-title">Education</h2>
+        <ul>
+            <li><strong>SSC (Secondary School Certificate)</strong>: 100%</li>
+            <li><strong>Intermediate Education</strong>: 93.2%</li>
+        </ul>
+
+        <h2 class="section-title">Projects</h2>
+        <ul>
+            <li><strong>Diet Suggester</strong> - Developed a web application for personalized diet suggestions based on daily food consumption, providing nutritional analysis and optimized diets.</li>
+            <li><strong>Avinya</strong> - Organized and led technical events, managing successful engagement and event coordination.</li>
+        </ul>
+
+        <h2 class="section-title">Skills</h2>
+        <ul class="skills">
+            <li><strong>Programming Languages:</strong> Python, JavaScript</li>
+            <li><strong>Web Development:</strong> Django, HTML, CSS</li>
+            <li><strong>Data Analysis:</strong> Excel, SQL</li>
+            <li><strong>Design:</strong> Canva, Figma</li>
+            <li><strong>Soft Skills:</strong> Communication, Leadership</li>
+            <li><strong>Problem-solving</strong></li>
+        </ul>
+
+        <h2 class="section-title">Strengths</h2>
+        <ul class="strengths">
+            <li>Analytical and problem-solving abilities</li>
+            <li>Time management skills</li>
+            <li>Team collaboration</li>
+            <li>Adaptability</li>
+        </ul>
+
+        <h2 class="section-title">Weaknesses</h2>
+        <ul class="weaknesses">
+            <li>Detail-oriented, sometimes affecting pace</li>
+            <li>Improving public speaking skills</li>
+        </ul>
+
+        <h2 class="section-title">Hobbies</h2>
+        <ul class="hobbies">
+            <li>Swimming</li>
+            <li>Drawing</li>
+            <li>Badminton</li>
+            <li>Dancing</li>
+        </ul>
+    </div>
 </body>
 </html>
+

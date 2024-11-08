@@ -1,7 +1,7 @@
 # app_18_3/views.py
 
 from django.shortcuts import render
-from .models import Resume  # Assuming you have a Resume model defined
+from .models import *  # Assuming you have a Resume model defined
 
 def resume_view(request):
     resume = Resume.objects.first()  # Get the first Resume instance, or None if it doesn’t exist
@@ -10,9 +10,9 @@ def resume_view(request):
 
     context = {
         'resume': resume,
-        'experiences': resume.experiences.all(),  # Adjust according to your model structure
-        'education': resume.education.all(),
-        'skills': resume.skills.all(),
+        'experiences': Experience.objects.all(),  # Adjust according to your model structure
+        'education': Education.objects.all(),
+        'skills': Skill.objects.all(),
     }
     return render(request, 'resume.html', context)
 #https://github.com/srivarshithagatta/resume.git
