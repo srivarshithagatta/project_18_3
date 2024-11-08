@@ -15,3 +15,5 @@ def resume_view(request):
         'skills': resume.skills.all(),
     }
     return render(request, 'resume.html', context)
+#https://github.com/srivarshithagatta/resume.git
+#https://github.com/srivarshithagatta/project_18_3.git
