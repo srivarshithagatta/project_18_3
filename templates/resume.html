@@ -1,3 +1,4 @@
+
 {% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,6 +108,15 @@
             background-color: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 8px;
+            position: relative;
+        }
+        .profile-pic {
+            height: 120px;
+            width: 120px;
+            object-fit: cover;
+            float: right;
+            margin-left: 20px; /* Add spacing between pic and text */
+            {% comment %} border-radius: 50%; {% endcomment %}
         }
         h1 {
             color: #2b2d42;
@@ -163,25 +173,56 @@
     <div class="resume-container">
         <h1>Varshitha Gatta</h1>
         <p class="contact-info">Email: 2310080018@klh.edu.in</p>
-
-        <h2 class="section-title">Education</h2>
-        <ul>
-            <li><strong>SSC (Secondary School Certificate)</strong>: 100%</li>
-            <li><strong>Intermediate Education</strong>: 93.2%</li>
-        </ul>
+        <body>
+            <div class="resume-container">
+                {% load static %}
+                <img src="{% static 'images/profile2.jpg' %}" alt="Profile Picture" class="profile-pic">
+                
+        
+                <h2 class="section-title">Education</h2>
+                <ul>
+                    <li><strong>SSC (Secondary School Certificate)</strong>: 100%</li>
+                    <li><strong>Intermediate Education</strong>: 93.2%</li>
+                    <li><strong>Intermediate Education</strong>: Bachelors in Technology (AI and Data Science) - KL University, Hyderabad</li>
+                    <li><strong>Present</strong> - 08/2023</li>
+                    <li><strong>CGPA</strong>: 9.25</li>
+                </ul>
 
         <h2 class="section-title">Projects</h2>
         <ul>
             <li><strong>Diet Suggester</strong> - Developed a web application for personalized diet suggestions based on daily food consumption, providing nutritional analysis and optimized diets.</li>
+            <li><strong>Health_insurance_predictor</strong> - Machine learning  algorithm  which Predicts the  health insurance for people using various features
+            
+        </ul>
+        <h2 class="section-title">events paricipated</h2>
+        <ul>
             <li><strong>Avinya</strong> - Organized and led technical events, managing successful engagement and event coordination.</li>
+            <li>1.Tech_Tinker</li>
+            <li>2.Target_hit </li>
+
+        </ul>
+
+        <h2 class="section-title">work shop attended</h2>
+        <ul>
+            <li> I attended the workshop on <strong>Generative AI</strong> in IIT Hyderabad</li>
+            
+
+        </ul>
+
+        <h2 class="section-title">Conference attended</h2>
+        <ul>
+            <li><strong>IEEE GRSS SYW</strong></li>
+            <li> The IEEE GRSS Student, Young Professional, and Women Congress (GRSS SYW) organized by the IEEE SB KLH (STB99212) in collaboration with IEEE GRSS IDEA (Inspire, Develop, Empower, Advance), IEEE GRSS Global Activities, IEEE REACT India Initiative presents an exceptional opportunity for passionate and bright minds to come together and share their expertise and innovative ideas.</li>
+            
+
         </ul>
 
         <h2 class="section-title">Skills</h2>
         <ul class="skills">
-            <li><strong>Programming Languages:</strong> Python, JavaScript</li>
+            <li><strong>Programming Languages:</strong> Python, c,JavaScript</li>
             <li><strong>Web Development:</strong> Django, HTML, CSS</li>
             <li><strong>Data Analysis:</strong> Excel, SQL</li>
-            <li><strong>Design:</strong> Canva, Figma</li>
+            <li><strong>Design:</strong> Canva, pics_art</li>
             <li><strong>Soft Skills:</strong> Communication, Leadership</li>
             <li><strong>Problem-solving</strong></li>
         </ul>
